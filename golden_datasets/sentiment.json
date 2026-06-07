@@ -1,0 +1,61 @@
+{
+  "name": "sentiment",
+  "cases": [
+    {
+      "id": "sent-001",
+      "input": "The product is absolutely fantastic, I love it!",
+      "expected_output": "positive",
+      "expected_labels": ["positive"],
+      "tags": ["sentiment", "strong-positive"]
+    },
+    {
+      "id": "sent-002",
+      "input": "This is the worst experience I've ever had. Terrible.",
+      "expected_output": "negative",
+      "expected_labels": ["negative"],
+      "tags": ["sentiment", "strong-negative"]
+    },
+    {
+      "id": "sent-003",
+      "input": "The package arrived on time and the item was as described.",
+      "expected_output": "neutral",
+      "expected_labels": ["neutral", "positive"],
+      "tags": ["sentiment", "neutral"]
+    },
+    {
+      "id": "sent-004",
+      "input": "I'm really disappointed with the quality. It broke after two days.",
+      "expected_output": "negative",
+      "expected_labels": ["negative"],
+      "tags": ["sentiment", "negative"]
+    },
+    {
+      "id": "sent-005",
+      "input": "Absolutely love this! Best purchase I've made all year.",
+      "expected_output": "positive",
+      "expected_labels": ["positive"],
+      "tags": ["sentiment", "strong-positive"]
+    },
+    {
+      "id": "sent-006",
+      "input": "It works fine. Nothing special.",
+      "expected_output": "neutral",
+      "expected_labels": ["neutral"],
+      "tags": ["sentiment", "neutral"]
+    },
+    {
+      "id": "sent-007",
+      "input": "Do not buy this. Complete waste of money!",
+      "expected_output": "negative",
+      "expected_labels": ["negative"],
+      "tags": ["sentiment", "strong-negative"]
+    },
+    {
+      "id": "sent-008",
+      "input": "Exceeded my expectations in every way. Highly recommend!",
+      "expected_output": "positive",
+      "expected_labels": ["positive"],
+      "tags": ["sentiment", "strong-positive"]
+    }
+  ]
+}
