@@ -1,0 +1,39 @@
+# Model Regression Detection System — project config
+# Copy this file and customise for your project.
+
+model:
+  id: claude-haiku-4-5-20251001        # model to evaluate
+  temperature: 0.0                      # 0 = deterministic, best for regression testing
+  max_tokens: 512
+  system_prompt: >
+    You are a helpful assistant. Answer concisely and accurately.
+
+# Jinja2 template. `input` is the test-case input field.
+# For multi-turn or structured prompts, use {{ input.field }}.
+prompt_template: "{{ input }}"
+
+datasets:
+  - path: golden_datasets/sentiment.json
+    name: sentiment
+  - path: golden_datasets/summarization.json
+    name: summarization
+
+metrics:
+  - name: label_match           # did the model predict the right class?
+    weight: 2.0
+    threshold: 1.0              # every case must match (strict)
+  - name: semantic_similarity   # embedding cosine similarity
+    weight: 1.0
+    threshold: 0.6              # must be at least 0.6 similar
+
+regression:
+  score_drop_threshold: 0.05    # alert if mean score drops by more than 5 pp
+  pass_rate_min: 0.80           # alert if fewer than 80% of cases pass
+  fail_on_regression: true      # exit(1) on regression — blocks CI merge
+
+slack:
+  enabled: true                 # set SLACK_WEBHOOK_URL env var to activate
+  channel: "#ml-alerts"
+  mention: "@channel"           # tag to ping on regression
+
+baseline_dir: baselines

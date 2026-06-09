@@ -1,0 +1,40 @@
+{
+  "name": "summarization",
+  "cases": [
+    {
+      "id": "sum-001",
+      "input": "The quick brown fox jumps over the lazy dog. The dog did not react and continued sleeping in the warm afternoon sun.",
+      "expected_output": "A fox jumps over a sleeping dog in the afternoon sun.",
+      "expected_labels": [],
+      "tags": ["summarization", "short"]
+    },
+    {
+      "id": "sum-002",
+      "input": "Scientists at MIT have developed a new battery technology that can charge a smartphone in under two minutes and last for a week on a single charge. The breakthrough relies on a novel graphene-based anode material.",
+      "expected_output": "MIT scientists created a graphene battery that charges phones in two minutes and lasts a week.",
+      "expected_labels": [],
+      "tags": ["summarization", "science"]
+    },
+    {
+      "id": "sum-003",
+      "input": "The company reported record quarterly earnings of $4.2 billion, up 23% year-over-year, driven by strong demand for its cloud services and a rebound in its advertising business.",
+      "expected_output": "The company posted record quarterly earnings of $4.2B, up 23% YoY, driven by cloud and advertising.",
+      "expected_labels": [],
+      "tags": ["summarization", "finance"]
+    },
+    {
+      "id": "sum-004",
+      "input": "Researchers found that regular 30-minute walks five days a week significantly reduce the risk of heart disease by 35%, improve mood, and increase cognitive function in adults over 50.",
+      "expected_output": "Regular 30-minute walks five days a week reduce heart disease risk by 35% and improve mood and cognition in older adults.",
+      "expected_labels": [],
+      "tags": ["summarization", "health"]
+    },
+    {
+      "id": "sum-005",
+      "input": "The new legislation requires all passenger vehicles sold in the country after 2030 to be fully electric. Automakers will receive tax incentives to accelerate the transition, while consumers will benefit from subsidies of up to $5,000 per vehicle.",
+      "expected_output": "New law mandates all new passenger cars be electric by 2030, with tax incentives for automakers and $5,000 consumer subsidies.",
+      "expected_labels": [],
+      "tags": ["summarization", "policy"]
+    }
+  ]
+}
